@@ -1,11 +1,30 @@
 html {
   font-size: 62.5%; /* same with 10px */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
 }
-@media all and (max-width: 750px) {
+
+.scrollable-element {
+  scrollbar-width: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+img {
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+}
+/* @media all and (max-width: 750px) {
   html {
     font-size: 16px;
   }
-}
+} */
 
 .App {
   text-align: center;
@@ -19,41 +38,131 @@ html {
 
 .App-header {
   position: fixed;
-  height: 60px; /* App-content.top: 60px */
+  /* App-content.top: 120px */
+  height: 120px;
   width: 100%;
   /* font-size: calc(1rem + 2vh); */
   font-size: 1.8rem;
   background-color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   color: black;
+  padding-top: 10px;
 }
 
-.App-content {
-  margin-top: 60px; /* App-header.height: 60px */
-  margin-bottom: 60px; /* App-footer.height: 60px */
-  margin-left: 10px;
-  margin-right: 10px;
+.App-header-row {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  /* border: 1px solid red; */
+}
+.App-header-order-message {
+  flex: 0.5;
+  text-align: left;
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.App-header-order-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header-order-id {
+  text-align: right;
+}
+
+.App-header-order-date {
+  text-align: right;
+}
+
+.App-header-title {
+  font-size: 3.5rem;
+  color: #ff0000;
+  letter-spacing: -1px;
+  font-family: 'Open Sans', sans-serif;
+  /* line-height: 1; */
+  font-weight: bolder;
+}
+
+/* .App-content {
+  background-color: white;
+} */
+
+.App-content-header {
+  position: fixed;
+  top: 120px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* background-color: aliceblue; */
+  /* height: 1rem; */
+  border-bottom: 1.5px solid #b0b0b0;
+  background-color: white;
+}
+.App-content-header-item {
+  color: #999;
+  flex: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  height: 30px;
+}
+
+.App-content-body {
+  margin-top: 150px; /* App-header.height: 120px */
+  margin-bottom: 100px; /* App-footer.height: 60px */
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  padding-left: 10px;
+  padding-right: 10px;
   flex: 1;
   font-size: 2rem;
   overflow-y: auto;
   color: black;
+  background-color: white;
 }
-.App-content-item {
-  border-bottom: 1px solid wheat;
+.App-content-body-item {
+  border-bottom: 2.5px solid ghostwhite;
   height: 10vh;
+  background-color: white;
 }
 
 .App-footer {
   position: fixed;
   bottom: 0;
-  height: 60px; /* App-content.bottom: 60px */
+  height: 100px; /* App-content.bottom: 60px */
   width: 100%;
   font-size: 1.8rem;
   color: black;
   background-color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  /* border: 1px solid blueviolet; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.App-footer-subtotal {
+  display: flex;
+  flex-direction: row;
+}
+.App-footer-tax {
+  display: flex;
+  flex-direction: row;
+  color: gray;
+}
+
+.App-footer-grandtotal {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.App-footer-space {
+  width: 15px;
 }
