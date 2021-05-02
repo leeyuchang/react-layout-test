@@ -5,15 +5,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="App-header-row">
-          {/* <div className="App-header-logo"> */}
-            {/* <img
-              src="http://www.supah.it/dribbble/017/logo.png"
-              width="32"
-              height="32"
-              alt="logo"
-              border="0"
-            /> */}
-          {/* </div> */}
           <div className="App-header-title">Invoice</div>
         </div>
         <div className="App-header-row">
@@ -37,7 +28,7 @@ function App() {
           <div className="App-content-header-item">Total</div>
           {/* <div className="App-content-header-item">Count</div> */}
         </div>
-        <div className="App-content-body scrollable-element">
+        <div className="App-content-body">
           <div className="App-content-body-item">1</div>
           <div className="App-content-body-item">2</div>
           <div className="App-content-body-item">3</div>

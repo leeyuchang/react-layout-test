@@ -2,10 +2,8 @@ html {
   font-size: 62.5%; /* same with 10px */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
-}
-
-.scrollable-element {
-  scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -20,15 +18,14 @@ img {
   border: 0; /* 1 */
   -ms-interpolation-mode: bicubic; /* 2 */
 }
-/* @media all and (max-width: 750px) {
+@media screen and (min-width: 939px) {
   html {
-    font-size: 16px;
+    font-size: calc(1rem);
   }
-} */
+}
 
 .App {
   text-align: center;
-  /* background-color: #282c34; */
   background-color: whitesmoke;
   color: white;
   display: flex;
@@ -39,16 +36,15 @@ img {
 .App-header {
   position: fixed;
   /* App-content.top: 120px */
-  height: 120px;
+  /* height: 120px; */
+  height: 12rem;
   width: 100%;
-  /* font-size: calc(1rem + 2vh); */
   font-size: 1.8rem;
   background-color: white;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  color: black;
+  color: #282c34;
   padding-top: 10px;
 }
 
@@ -84,7 +80,6 @@ img {
   color: #ff0000;
   letter-spacing: -1px;
   font-family: 'Open Sans', sans-serif;
-  /* line-height: 1; */
   font-weight: bolder;
 }
 
@@ -94,7 +89,7 @@ img {
 
 .App-content-header {
   position: fixed;
-  top: 120px;
+  top: 12rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -108,14 +103,12 @@ img {
   flex: 1;
   font-size: 1.8rem;
   font-weight: bold;
-  height: 30px;
+  height: 3rem;
 }
 
 .App-content-body {
-  margin-top: 150px; /* App-header.height: 120px */
-  margin-bottom: 100px; /* App-footer.height: 60px */
-  /* margin-left: 10px; */
-  /* margin-right: 10px; */
+  margin-top: 15rem; /* App-header : height: 12rem */
+  margin-bottom: 10rem; /* App-footer.height: 60px */
   padding-left: 10px;
   padding-right: 10px;
   flex: 1;
@@ -128,12 +121,13 @@ img {
   border-bottom: 2.5px solid ghostwhite;
   height: 10vh;
   background-color: white;
+  font-size: 1.8rem;
 }
 
 .App-footer {
   position: fixed;
   bottom: 0;
-  height: 100px; /* App-content.bottom: 60px */
+  height: 10rem; /* App-content.bottom: 60px */
   width: 100%;
   font-size: 1.8rem;
   color: black;
@@ -150,6 +144,7 @@ img {
 .App-footer-subtotal {
   display: flex;
   flex-direction: row;
+  color: #282c34;
 }
 .App-footer-tax {
   display: flex;
@@ -160,7 +155,9 @@ img {
 .App-footer-grandtotal {
   display: flex;
   flex-direction: row;
-  font-weight: bold;
+  font-weight: bolder;
+  color: #282c34;
+  font-size: 1.9rem;
 }
 
 .App-footer-space {
